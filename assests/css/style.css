@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #000;
+    --secondary: #fff;
+    --ternory: rgb(13, 49, 75);
+    --forth: rgb(237, 218, 12);
+}
+
+body {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Condensed';
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: currentColor;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.listing-sec {
+    margin-top: 100px;
+}
+
+.listing-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.listings-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    color: var(--ternory);
+    font-size: 18px;
+    font-weight: 500;
+    border: 3px solid var(--ternory);
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.listings-a:hover {
+    background-color: var(--ternory);
+    color: var(--secondary);
+}
+
+.sunshine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--ternory);
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.sunshine:hover {
+    opacity: 100%;
+}
+
+.very-nice {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ternory);
+    opacity: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.very-nice:hover {
+    opacity: 100%;
+}
+
+.slider-sec {
+    margin-top: 100px;
+}
+
+.slider-inner {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.splide {
+    width: 80%;
+}
+
+.thumbnail-slider {
+    width: 20%;
+}
+
+.splide__slide img {
+    width: 100%;
+}
+
+.splide__slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+    border: none;
+}
+
+.splide__slide{
+    height: 200px;
+}
