@@ -1,43 +1,25 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     var mainSlider = new Splide('#main-slider', {
-//         type: 'fade',
-//         heightRatio: 0.5,   
-//         pagination: false,
-//         arrows: true,
-//         cover: true,
-//     }).mount();
-    
-
-
-
-
-
-
-
-
-// var splide = new Splide( '.splide', {
-//   direction: 'ttb',
-//   height   : '10rem',
-//   wheel    : true,
-// } );
-
-// splide.mount();
-// });
-
-// Product Slider------------------------------------------
 if (document.querySelector(".product-img-slider")) {
     var main = new Splide(".product-img-slider", {
         type: "fade",
         perPage: 1,
         perMove: 1,
         arrows: false,
+        autoplay:true, 
+        autoScroll:{
+          speed:0.1,
+        },
+        autoWidth:"100%",
     });
 
     var thumbnails = new Splide(".product-images-thumbnail-slider", {
         direction: "ttb",
         height: "100%",
         gap: 12,
-        // focus: "center",
+        focus: "center",
+        autoplay:true, 
+        autoScroll:{
+          speed:0.1,
+        },
         isNavigation: true,
         arrows: false,
         pagination: false,
@@ -56,3 +38,14 @@ if (document.querySelector(".product-img-slider")) {
     main.mount();
     thumbnails.mount();
 }
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 6,
+    loop:true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
