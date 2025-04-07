@@ -595,18 +595,18 @@ ul.splide__pagination.splide__pagination--ltr {
     align-items: center;
     gap: 10px;
     border: 3px solid var(--ternory);
-    border-radius: 10px;
-    padding: 10px 15px;
-}
-
-.product-price-a span {
     color: var(--ternory);
+    background-color: transparent;
+    border-radius: 10px;
     font-size: 22px;
     font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
 }
 
-.product-price-a svg {
-    color: var(--ternory);
+.product-price-a:hover{
+    background-color: var(--ternory);
+    color: var(--secondary);
 }
 
 .product-size-right span {
