@@ -114,6 +114,13 @@ img {
     object-fit: cover;
 }
 
+.splide__slides img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 .thumbnail-slider .is-active {
     border: none !important;
 }
@@ -311,6 +318,7 @@ ul.splide__pagination.splide__pagination--ltr {
     gap: 5px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    white-space: nowrap;
 }
 
 .cart-a:hover {
@@ -336,6 +344,7 @@ ul.splide__pagination.splide__pagination--ltr {
     gap: 5px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    white-space: nowrap;
 }
 
 .buynow:hover {
@@ -437,13 +446,25 @@ ul.splide__pagination.splide__pagination--ltr {
     color: #000000b4;
 }
 
-iframe {
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 150px; 
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
     border-radius: 10px;
-}
-
-.maps-a {
-    margin-top: 25px;
-}
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    border: 0;
+  }
+  
 
 .slider {
     margin-top: 100px;
@@ -458,47 +479,379 @@ iframe {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 3px solid var(--ternory);
+    border-radius: 10px;
 }
 
-.swiper-slide img {
-    display: block;
+.swiper_department_image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
-.swiper.mySwiper.swiper-initialized.swiper-horizontal{
-    overflow: visible;
+.swiper_department_image {
+    position: relative;
 }
 
-.swiper-wrapper{
-    margin-top: 30px;
+.stemp {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    color: darkolivegreen;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.swiper-head{
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--ternory);
+.stemps {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--ternory);
+    color: var(--secondary);
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.review{
-    margin-top: 100px;
+.stemp-s {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--secondary);
+    color: rgba(198, 9, 9, 0.826);
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.review-title{
-    font-size: 30px;
+.product-details {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--ternory);
+}
+
+.product-size {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.product-size span {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--ternory);
+}
+
+.product-size svg {
+    color: var(--ternory);
+}
+
+.product-sizes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-size-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-price del {
+    color: var(--ternory);
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 50%;
+}
+
+.product-price ins {
+    color: var(--ternory);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.product-price-a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid var(--ternory);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.product-price-a span {
+    color: var(--ternory);
+    font-size: 22px;
     font-weight: 600;
 }
 
-.star-group{
+.product-price-a svg {
+    color: var(--ternory);
+}
+
+.product-size-right span {
+    color: var(--ternory);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-size-right svg {
+    color: var(--ternory);
+}
+
+.swiper-text {
+    padding: 15px;
+    border-top: 3px solid var(--ternory);
+}
+
+.swiper.shopping_swiper.swiper-initialized.swiper-horizontal {
+    overflow: visible;
+}
+
+.swiper-wrapper {
+    margin-top: 30px;
+}
+
+.swiper-head {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--ternory);
+}
+
+.review-inner {
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+}
+
+.reviews {
+    margin-top: 100px;
+}
+
+.review-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--primary);
+    opacity: 75%;
+}
+
+.star-group {
     display: flex;
     color: gray;
     position: relative;
-    margin-top: 20px;
     gap: 6px;
 }
 
+.purchase-detail {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.review-heading {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ternory);
+    opacity: 50%;
+}
+
+.review-desc {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000000c5;
+    max-width: 500px;
+    line-height: 32px;
+}
+
+.recommends {
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.recommend-detail {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.recommend-detail svg {
+    color: var(--ternory);
+}
+
+.recommend-head {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ternory);
+}
+
+.review-profile-img img {
+    object-fit: cover;
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+}
+
+.review-profile {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.review-profile-head {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ternory);
+}
+
+.review-profile-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.541);
+}
+
+.recommend-details {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.recommend-details svg {
+    color: var(--ternory);
+    opacity: 50%;
+    transform: rotateY(180deg);
+}
+
+.recommend-heads {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ternory);
+    opacity: 50%;
+}
+
+.review-profile-img img {
+    object-fit: cover;
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+}
+
+.question-desc {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--primary);
+    opacity: 75%;
+}
+
+.masseger-seller {
+    border: 3px solid var(--ternory);
+    padding: 25px 20px;
+    margin-top: 25px;
+    border-radius: 12px;
+}
+
+.masseger-seller-head {
+    color: var(--ternory);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.massager-img img {
+    object-fit: cover;
+    width: 47px;
+    height: 47px;
+    border-radius: 30px;
+}
+
+.masseger-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.masseger-seller-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.massager-head {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ternory);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'Roboto Condensed';
+    font-weight: 500;
+    color: var(--ternory);
+    border: 2px solid #00000033;
+    padding: 10px;
+    opacity: 60%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: var(--ternory);
+    opacity: 60%;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ternory);
+    opacity: 60%;
+}
+
+.send-btn {
+    display: block;
+    margin-top: 30px;
+    border: 2px solid var(--ternory);
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--secondary);
+    background-color: var(--ternory);
+    padding: 13px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.send-btn:hover {
+    color: var(--ternory);
+    background-color: transparent;
+}

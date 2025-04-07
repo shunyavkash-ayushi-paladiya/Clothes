@@ -4,13 +4,18 @@
     }
 }
 
-@media screen and (max-width:768px) {
-    ul#thumbnail-slider-list {
-        display: flex;
+@media screen and (max-width:1024px) {
+    .review-inner {
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .slider-inner {
+    .recommends {
         flex-direction: column;
+    }
+
+    .review-desc {
+        max-width: none;
     }
 }
 
@@ -23,13 +28,13 @@
     .cart {
         margin-top: 30px;
     }
+
+    .slider-inner {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:575px) {
-    iframe {
-        width: 340px;
-        height: 200px;
-    }
 
     .cost {
         flex-direction: column;
@@ -53,5 +58,14 @@
 
     .listings-a {
         max-width: 150px;
+    }
+
+    .purchase-detail {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .splide__slide img {
+        max-width: 280px;
     }
 }

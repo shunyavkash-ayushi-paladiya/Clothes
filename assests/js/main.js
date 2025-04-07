@@ -39,13 +39,36 @@ if (document.querySelector(".product-img-slider")) {
     thumbnails.mount();
 }
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 6,
-    loop:true,
-    spaceBetween: 30,
-    centeredSlides: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+let mySwiperss = document.querySelectorAll(".shopping_swiper");
+if(mySwiperss.length){
+    var swiper = new Swiper('.shopping_swiper', {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+        loop:true,
+        breakpoints: {
+            320: { 
+                slidesPerView: 1,
+            },
+            375: { 
+                slidesPerView: 1,
+            },
+            425: { 
+                slidesPerView: 1,
+            },
+            575: { 
+                slidesPerView: 2,
+            },
+            768: { 
+                slidesPerView: 3,
+            },
+            1024: { 
+                slidesPerView: 5,
+            },
+            1200: { 
+                slidesPerView: 5,
+            }
+        },
+});
+}
+
+
